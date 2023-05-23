@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>Profile</title> 
+</head>
+
+<body>
+    <input type="checkbox" id="check">
+
+    <div class="pop-up-box">
+
+        <div class="pop-up">
+            <div class="pop-up-content">
+                <header>
+                    <p>Delete Account</p>
+                    <i class='bx bx-plus'></i>
+                </header>
+                <form action="#">
+                    <p>Are you shure you want to delete your account?
+                    You will not be able to restore it.</p>
+                    <br>
+                    <button>Yes, I`m shure</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="pop-up">
+            <div class="pop-up-content">
+                <header>
+                    <p>Error</p>
+                    <i class='bx bx-plus'></i>
+                </header>
+                <form action="#">
+                    <p>Error occured. The actions were not saved.</p>
+                </form>
+            </div>
+        </div>         
+    </div>
+
+    <div class="content">
+        <div class="profile">
+            <div class="profile-left">
+                <i class='bx bxs-user-circle' ></i>
+            </div>
+            <div class="profile-right">
+                <div class="profile-info">
+                    <h3>Personal Information</h3>
+                    <div class="info-data">
+                         <div class="data">
+                            <h4>Username</h4>
+                            <p>username</p>
+                         </div>
+                         <div class="data">
+                            <h4>Email</h4>
+                            <p>email@gmail.com</p>
+                         </div>
+                    </div>
+                <button><i class='bx bx-trash'></i>Delete</button>
+                <button><a href="edituser.html"><i class='bx bx-pencil' ></i>Edit</a></button>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="sidebar">    
+        <header>
+            <label for="check">
+                <i class='bx bx-chevron-right toggle' id="sidebar_btn"></i>
+            </label>
+
+            <div class="image-text">
+                <span class="image">
+                    <img src="images/profile-icon.png" alt="">
+                </span>
+    
+                <div class="text logo-text">
+                    <div class="name">yeriinnn</div>
+                </div>
+            </div>
+        </header>
+        <br>
+
+        <div class="menu">
+
+            <a href="home.html"><i class="bx bx-home-alt icon"></i><span>Home</span></a>
+            <a href="profile.html"><i class="bx bx-user-pin"></i><span>Profile</span></a>
+            <a href="mynotes.html"><i class="bx bx-note"></i><span>My Notes</span></a>
+            <a href="notes-statistics.html"><i class="bx bx-bar-chart-alt-2 icon"></i><span>Notes Statistics</span></a>
+
+        </div>
+
+        <div class="bottom-content">
+                <a href="login.html">
+                    <i class='bx bx-log-out icon' ></i>
+                    <span class="text nav-text">Logout</span>
+                </a>             
+        </div>
+    </nav>
+
+    <div class="content-image-profile"></div>
+
+    <div class="logo-header" id="logo-header">
+        <span class="greetings">My Profile</span>
+        <span class="calendar-day">SUNDAY, MAY 6, 2022</span>
+    </div>
+
+</body>
