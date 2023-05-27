@@ -584,6 +584,7 @@ footer {
   grid-template-columns: repeat(auto-fill, 235px);
 
   li {
+    height: 35vh;
     list-style: none;
     padding: 0 15px 15px;
     background: $neutral-grey;
@@ -989,3 +990,31 @@ label #sidebar_btn {
 #check {
   display: none;
 }
+
+
+#addnewnote_form {
+  padding-top: 0 !important;
+  padding-left: 0px !important;
+  font-size: 18px;
+  text-align:center;
+  width: 90%;
+  input {
+    margin-left: 0 !important;
+  }
+
+#createnewbutton {
+
+    background-color: #695CFE ;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    color: #fff ;
+    border-radius: 15px;
+    padding-top: 10px;
+    
+  }
+
+}
+
+
+

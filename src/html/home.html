@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="../style/style.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     
     <title>Home</title> 
@@ -146,11 +146,11 @@
 
             <div class="image-text">
                 <span class="image">
-                    <img src="images/profile-icon.png" alt="">
+                    <img src="../images/profile-icon.png" alt="">
                 </span>
     
                 <div class="text logo-text">
-                    <div class="name">yeriinnn</div>
+                    <div class="name" id="sidebar_name"></div>
                 </div>
             </div>
            
@@ -167,18 +167,20 @@
         </div>
 
         <div class="bottom-content">
-                <a href="login.html">
-                    <i class='bx bx-log-out icon' ></i>
-                    <span>Logout</span>
-                </a>             
+            <div class="logout">
+                <i class='bx bx-log-out icon' ></i>
+            <span class="text nav-text" id="logout-button">Logout</span>
+            </div>             
         </div>
     </nav>
 
     <div class="content-image-home"></div>
 
     <div class="logo-header" id="logo-header">
-        <span class="greetings">Good Day, Bigus Maksym</span>
+        <span class="greetings">Good Day</span>
         <span class="calendar-day">SUNDAY, MAY 6, 2022</span>
     </div>
+    <script src="../javascript/home.js"></script>
+
     
 </body>

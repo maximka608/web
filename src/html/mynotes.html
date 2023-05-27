@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="../style/style.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     
-    <title>My Notes</title> 
+    <title> My Notes </title> 
 </head>
 
 <body>
@@ -123,12 +123,12 @@
 
 
         <!-- NOTE -->
-        <ul class="wrapper">
-            <li class="add-box-note">
-                <div class="plus-icon">
+        <ul class="wrapper" id="all_notes_wrap">
+            <li class="add-box-note" id="addnewcont">
+                <div class="plus-icon" id="add_new_note_b">
                     <i class='bx bx-plus'></i>
                 </div>
-                <p>Add new note</p>
+                <p id="add_new_note_b" >Add new note</p>
             </li>
 
             <li class="note">
@@ -253,10 +253,10 @@
 
             <div class="image-text">
                 <span class="image">
-                    <img src="images/profile-icon.png" alt="">
+                    <img src="../images/profile-icon.png" alt="">
                 </span>
                 <div class="text logo-text">
-                    <div class="name">yeriinnn</div>
+                    <div class="name" id="sidebar_name"></div>
                 </div>
             </div>  
         </header>
@@ -270,10 +270,10 @@
         </div>
 
         <div class="bottom-content">
-            <a href="login.html">
+            <div class="logout">
                 <i class='bx bx-log-out icon' ></i>
-                <span class="text nav-text">Logout</span>
-            </a>             
+            <span class="text nav-text" id="logout-button">Logout</span>
+            </div>            
         </div>
     </nav>
 
@@ -283,5 +283,8 @@
         <span class="greetings">My Notes</span>
         <span class="calendar-day">SUNDAY, MAY 6, 2022</span>
     </div>
+
+    <script src="../javascript/mynotes.js"></script>
+
 
 </body>

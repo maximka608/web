@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="../style/style.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     
     <title>Edit Profile</title> 
@@ -25,22 +25,11 @@
                     <p>Are you shure you want to discard changes?
                     You will not be able to restore it.</p>
                     <br>
-                    <button>Yes, I`m shure</button>
+                    <button id="discard-changes">Yes, I`m shure</button>
                 </form>
             </div>
         </div>
 
-        <div class="pop-up">
-            <div class="pop-up-content">
-                <header>
-                    <p>Error</p>
-                    <i class='bx bx-plus'></i>
-                </header>
-                <form action="#">
-                    <p>Error occured. The actions were not saved.</p>
-                </form>
-            </div>
-        </div>         
     </div>
 
     <div class="content">
@@ -54,11 +43,11 @@
                     <div class="info-data">
                          <div class="data">
                             <h4>Username</h4>
-                            <input type="text" placeholder="username">
+                            <input type="text" placeholder="username" id="username">
                          </div>
                          <div class="data">
                             <h4>Email</h4>
-                            <input type="text" placeholder="email">
+                            <input type="text" placeholder="email" id="email">
                          </div>
                     </div>
 
@@ -66,16 +55,17 @@
                     <div class="info-data">
                          <div class="data">
                             <h4>Password</h4>
-                            <input type="text" placeholder="password">
+                            <input type="password" placeholder="password" id="password">
                          </div>
                          <div class="data">
                             <h4>Confirm password</h4>
-                            <input type="text" placeholder="confirm password">
+                            <input type="password" placeholder="confirm password" id="confirm-password">
                          </div>
                     </div>
-                
-                <button><a href="profile.html"><i class='bx bx-x'></i>Discard</a></button>
-                <button><a href="profile.html"><i class='bx bx-check'></i>Save</a></button>
+                    <span id="error-message"></span>
+                    <br>
+                <button id="discard-button"><i class='bx bx-x'></i>Discard</button>
+                <button id="save-button"><i class='bx bx-check'></i>Save</button>
                 </div>
             </div>
         </div>
@@ -90,11 +80,11 @@
 
             <div class="image-text">
                 <span class="image">
-                    <img src="images/profile-icon.png" alt="">
+                    <img src="../images/profile-icon.png" alt="">
                 </span>
     
                 <div class="text logo-text">
-                    <div class="name">Bigus Maksym</div>
+                    <div class="name">yeriinnn</div>
                 </div>
             </div>
         </header>
@@ -110,13 +100,16 @@
         </div>
 
         <div class="bottom-content">
-                <a href="login.html">
-                    <i class='bx bx-log-out icon' ></i>
-                    <span class="text nav-text">Logout</span>
-                </a>             
+            <div class="logout">
+                <i class='bx bx-log-out icon' ></i>
+                <span class="text nav-text" id="logout-button">Logout</span>
+            </div>           
         </div>
     </nav>
 
     <div class="content-image-profile"></div>
 
+    <script src="../javascript/edituser.js"></script>
+
 </body>
+</html>
