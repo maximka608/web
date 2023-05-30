@@ -117,21 +117,25 @@
         <p>NOTES</p>
         <div class="search-box">
             <i class='bx bx-search icon'></i>
-            <input type="text">
+            <input type="text" id="search_input">
         </div>
         <br>
 
 
         <!-- NOTE -->
-        <ul class="wrapper" id="all_notes_wrap">
+        <div class="div_all_notes" >
+        <ul class="wrapper">
             <li class="add-box-note" id="addnewcont">
                 <div class="plus-icon" id="add_new_note_b">
                     <i class='bx bx-plus'></i>
                 </div>
-                <p id="add_new_note_b" >Add new note</p>
+                <p >Add new note</p>
             </li>
+            </ul>
+            <ul class="wrapper" id="all_notes_wrap">
+            <!-- <div id="all_notes_wrap"> </div> -->
 
-            <li class="note">
+            <!-- <li class="note">
               <div class="details">
                   <p>This is a Title</p>
                   <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore commodi tenetur, veritatis minima.</span>
@@ -240,9 +244,10 @@
                     </ul>
                     </div>
                 </div>
-            </li>
-        </ul>
-    </div>
+             </li> -->
+         </ul>
+        </div>
+    </div>  
 
     <nav class="sidebar">
         
@@ -256,7 +261,7 @@
                     <img src="../images/profile-icon.png" alt="">
                 </span>
                 <div class="text logo-text">
-                    <div class="name" id="sidebar_name"></div>
+                    <div class="name" id="sidebar_name2"></div>
                 </div>
             </div>  
         </header>
@@ -266,12 +271,12 @@
             <a href="home.html"><i class="bx bx-home-alt icon"></i><span>Home</span></a>
             <a href="profile.html"><i class="bx bx-user-pin"></i><span>Profile</span></a>
             <a href="mynotes.html"><i class="bx bx-note"></i><span>My Notes</span></a>
-            <a href="notes-statistics.html"><i class="bx bx-bar-chart-alt-2 icon"></i><span>Notes Statistics</span></a>
+        
         </div>
 
         <div class="bottom-content">
             <div class="logout">
-                <i class='bx bx-log-out icon' ></i>
+                <i class='bx bx-log-out icon' id="logout-b"></i>
             <span class="text nav-text" id="logout-button">Logout</span>
             </div>            
         </div>
@@ -285,6 +290,9 @@
     </div>
 
     <script src="../javascript/mynotes.js"></script>
+    
+    
+
 
 
 </body>

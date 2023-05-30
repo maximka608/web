@@ -6,6 +6,7 @@ const logButton = document.getElementById('navigation-log-button');
 const registerButton = document.getElementById('navigation-register-button');
 const changeButton = document.getElementById('change-form-button');
 
+
 if (window.localStorage.getItem('token')) {
     window.location.replace('../html/home.html');
 }

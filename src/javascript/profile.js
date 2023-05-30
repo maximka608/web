@@ -1,12 +1,38 @@
 
-const url = 'http://127.0.0.1:5000/user/';
-
 const deleteButton = document.getElementById('delete-button');
 const editButton = document.getElementById('edit-button');
 const deletePopUp = document.querySelector('.pop-up-box');
 const closeIcon = deletePopUp.querySelector('header i');
 const deleteAccountButton = document.getElementById('delete-account');
 const logOutButton = document.getElementById('logout-button');
+
+const url = 'http://127.0.0.1:5000/user/';
+
+var currentDate = new Date();
+var options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
+var formattedDate = currentDate.toLocaleDateString('en-US', options).toUpperCase();
+
+var dataElement = document.querySelector('span.calendar-day');
+dataElement.textContent = formattedDate;
+
+fetch(`${url}${window.localStorage.getItem('id')}`, {
+    method: 'GET',
+    headers: {
+        Authorization: `Bearer ${window.localStorage.getItem('token')}`,
+        'Content-Type': 'application/json',
+    },
+}).then(async (response) => {
+    if (response.ok) {
+        return response.json();
+    }
+    return response.text().then((text) => { throw new Error(text); });
+}).then((data) => {
+    
+    const username1 = document.getElementById('sidebar_name');
+    username1.innerHTML = `<p>${data.name}</p>`;
+    
+});
+
 
 window.onload = (e) => {
     e.preventDefault();
@@ -32,6 +58,7 @@ window.onload = (e) => {
 
 function deleteUser(e) {
     e.preventDefault();
+    console.log("cdjdv");
 
     fetch(`${url}${window.localStorage.getItem('id')}`, {
         method: 'DELETE',
@@ -48,6 +75,7 @@ function deleteUser(e) {
 
 function deleteAccountHandler(e) {
     e.preventDefault();
+    
 
     if (deletePopUp.classList.contains('show')) {
         deleteUser();
@@ -58,6 +86,30 @@ function deleteAccountHandler(e) {
 
 function deleteButtonHandler(e) {
     e.preventDefault();
+    
+    var confirmed = confirm('Are you sure you want to delete this user?');
+    if (confirmed) {
+        fetch(`${url}${window.localStorage.getItem('id')}`, {
+            method: 'DELETE',
+            headers: {
+                Authorization: `Bearer ${window.localStorage.getItem('token')}`,
+                'Content-Type': 'application/json',
+            },
+            
+        }).then(async (response) => {
+            if (response.ok) {
+                return response.json();
+            }
+            return response.text().then((text) => { throw new Error(text); });
+        }).then(() => {
+            window.location.replace('../html/mainpage.html');
+        }).catch((error) => {
+            displayErrorMessage(error);
+        });
+    
+          // Код для видалення користувача
+        console.log('User deleted.');
+    }
     deletePopUp.classList.add('show');
 }
 

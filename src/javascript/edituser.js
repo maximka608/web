@@ -8,6 +8,26 @@ const closeIcon = discardPopUp.querySelector('header i');
 const saveButton = document.getElementById('save-button');
 const logOutButton = document.getElementById('logout-button');
 
+
+fetch(`${url}${window.localStorage.getItem('id')}`, {
+    method: 'GET',
+    headers: {
+        Authorization: `Bearer ${window.localStorage.getItem('token')}`,
+        'Content-Type': 'application/json',
+    },
+}).then(async (response) => {
+    if (response.ok) {
+        return response.json();
+    }
+    return response.text().then((text) => { throw new Error(text); });
+}).then((data) => {
+    
+    const username1 = document.getElementById('sidebar_name');
+    username1.innerHTML = `<p>${data.name}</p>`;
+    
+});
+
+
 function displayErrorMessage(error) {
     const errorMessage = document.getElementById('error-message');
     errorMessage.innerHTML = `<img src="../images/alert.png" alt="" width="16" height="16">
@@ -56,6 +76,7 @@ function saveChangesHandler(e) {
 function discardChangesHandler(e) {
     e.preventDefault();
     if (discardPopUp.classList.contains('show')) {
+        console.log("cjdv");
         discardPopUp.classList.remove('show');
         window.location.replace('../html/profile.html');
     }
@@ -63,6 +84,7 @@ function discardChangesHandler(e) {
 
 function discardButtonHandler(e) {
     e.preventDefault();
+    window.location.replace('../html/profile.html');
     discardPopUp.classList.add('show');
 }
 

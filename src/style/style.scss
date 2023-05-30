@@ -364,22 +364,22 @@ footer {
 // ----BACKGROUND-----
 .content-image-home {
   @include content-image();
-  background-image: url("background/aesthetic-purple.jpg");
+  background-image: url("aesthetic-purple.jpeg");
 }
 
 .content-image-mynotes {
   @include content-image();
-  background-image: url("background/cloud-sky-purple.jpg");
+  background-image: url("cloud-sky-purple.jpeg");
 }
 
 .content-image-profile {
   @include content-image();
-  background: url("background/gradient-background.jpg");
+  background: url("gradient-background.jpeg");
 }
 
 .content-image-note-statistics {
   @include content-image();
-  background: url("background/violet-purple.jpg");
+  background: url("violet-purple.jpg");
 }
 
 .logo-header {
@@ -1014,7 +1014,52 @@ label #sidebar_btn {
     
   }
 
+
+
 }
 
+#logout-button {
+  color: #fff;
+}
+
+#logout-b {
+  color: #fff
+}
+
+#editnote_form {
+  padding-top: 0 !important;
+  padding-left: 0px !important;
+  font-size: 18px;
+  text-align:center;
+  width: 95%;
+  input {
+    margin-left: 0 !important;
+  }
+  .title_edit_note {
+    color: #695CFE;
+  }
+
+}
+
+#updatenotebutton {
+    background-color: #695CFE ;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    color: #fff ;
+    border-radius: 15px;
+    padding-top: 10px;
+}
+
+
+// #all_notes_wrap {
+//   display: flex;
+  
+// }
+
+// .div_all_notes {
+//   display: flex;
+  
+// }
 
 
